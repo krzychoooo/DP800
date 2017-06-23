@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1498087225 source:e:\google dysk\projekty\cpp\dp800\dp800\dp800.cpp
+	"dp800.h"
+	"visa.h"
+	<stdlib.h>
+	<stdio.h>
+	<iostream>
+	<string.h>
+	<sstream>
+	<time.h>
+	<iomanip>
+	<cmath>
+
+1497987686 e:\google dysk\projekty\cpp\dp800\dp800\dp800.h
+	"visa.h"
+	<windows.h>
+	<string>
+
+1495007812 e:\google dysk\projekty\cpp\dp800\dp800\visa.h
+	<stdarg.h>
+	"visatype.h"
+
+1495007812 e:\google dysk\projekty\cpp\dp800\dp800\visatype.h
+
+1498080093 source:e:\google dysk\projekty\cpp\dp800\example\csv\csv.cpp
+	"csv.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<stdio.h>
+
+1498079087 e:\google dysk\projekty\cpp\dp800\example\csv\csv.h
+	<fstream>
+
+1498087282 source:e:\google dysk\projekty\cpp\dp800\example\pt4115test\main.cpp
+	<iostream>
+	<cstdlib>
+	"../../DP800/dp800.h"
+	"../csv/csv.h"
+

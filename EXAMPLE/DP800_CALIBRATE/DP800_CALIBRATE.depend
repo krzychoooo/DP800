@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1498121561 source:e:\google dysk\projekty\cpp\dp800\dp800\dp800.cpp
+	"dp800.h"
+	"visa.h"
+	<stdlib.h>
+	<stdio.h>
+	<iostream>
+	<string.h>
+	<sstream>
+	<time.h>
+	<iomanip>
+	<cmath>
+
+1497987686 e:\google dysk\projekty\cpp\dp800\dp800\dp800.h
+	"visa.h"
+	<windows.h>
+	<string>
+
+1495007812 e:\google dysk\projekty\cpp\dp800\dp800\visa.h
+	<stdarg.h>
+	"visatype.h"
+
+1495007812 e:\google dysk\projekty\cpp\dp800\dp800\visatype.h
+
+1497863560 source:e:\google dysk\projekty\cpp\miernik_3500a\m3500a.cpp
+	"m3500a.h"
+	"visa.h"
+	<stdlib.h>
+	<stdio.h>
+	<iostream>
+	<string.h>
+	<sstream>
+
+1497863296 e:\google dysk\projekty\cpp\miernik_3500a\m3500a.h
+	"visa.h"
+	<windows.h>
+	<string>
+
+1495007812 e:\google dysk\projekty\cpp\miernik_3500a\visa.h
+	<stdarg.h>
+	"visatype.h"
+
+1495007812 e:\google dysk\projekty\cpp\miernik_3500a\visatype.h
+
+1498156073 source:e:\google dysk\projekty\cpp\dp800_calibrate\main.cpp
+	<iostream>
+	<iomanip>
+	"../DP800/DP800/dp800.h"
+	"../Miernik_3500A/m3500a.h"
+
