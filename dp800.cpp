@@ -192,14 +192,27 @@ void DP800::sendCommand(char* command,unsigned char* requestBuffer , int command
     // Send read command
 
     status = PviWrite_usb(m_instr_usbtmc, (unsigned char *) command, commandSize, &nWritten);
-    Sleep(50);
+    Sleep(80);
     //cout<<"nW="<<nWritten<<" "<<endl;
     //printf(" output : READ?\n");
 
     if(readDevice){
         status = PviRead_usb(m_instr_usbtmc, requestBuffer, 64, &nRead);
+        int i=0;
+        while(status != 0){
+            Sleep(80);
+            status = PviWrite_usb(m_instr_usbtmc, (unsigned char *) command, commandSize, &nWritten);
+            Sleep(80);
+            //cout<<"PviRead_usb_start ";
+            status = PviRead_usb(m_instr_usbtmc, requestBuffer, 64, &nRead);
+            //cout<<"PviRead_usb_end ";
+            Sleep(50);
+            if(i++>100)break;
+        }
+        cout<<"i="<<i;
         requestBuffer[nRead] = '\0';
     }
+
 //    if (nRead > 0) {
 //        for (int len = 0; len < (long) nRead; len++) {
 //            requestBuffer[len] = pStrin[len];
@@ -321,7 +334,7 @@ void DP800::setVI(int chanel, float volt, float current){
     command = "APPLy CH" + ch + "," + voltString + "," + currentString + "\n";
     sprintf(pStrout, "%s", command.c_str());
     sendCommand(pStrout, pStrin, command.length(), false);
-    system("PAUSE");
+    //system("PAUSE");
     delete pStrout;
 }
 
@@ -514,6 +527,7 @@ float DP800::getPower(int chanel){
     sprintf(pStrout, "%s", command.c_str());
     sendCommand(pStrout, pStrin, command.length(), true);
     std::string valueString(pStrin, pStrin + lenCharArray(pStrin));
+    //cout<<pStrin;
     float pomiar = strtof((valueString).c_str(), 0);
 
     delete pStrout;
